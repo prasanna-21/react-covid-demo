@@ -1,5 +1,5 @@
 import React from "react";
-// import CountUp from "react-countup";
+import CountUp from "react-countup";
 
 function Card(props) {
   // console.log(props.data);
@@ -17,7 +17,13 @@ function Card(props) {
                 <div className="meta">
                   {new Date(data.lastUpdate).toDateString()}
                 </div>
-                <div className="description">{data.confirmed}</div>
+                {/* <div className="description">{data.confirmed}</div> */}
+                <CountUp
+                  start={0}
+                  end={data.confirmed}
+                  duration={2.5}
+                  seperator=","
+                />
               </div>
             </div>
 
@@ -27,7 +33,13 @@ function Card(props) {
                 <div className="meta">
                   {new Date(data.lastUpdate).toDateString()}
                 </div>
-                <div className="description">{data.deaths}</div>
+                {/* <div className="description">{data.deaths}</div> */}
+                <CountUp
+                  start={0}
+                  end={data.deaths}
+                  duration={2.5}
+                  seperator=","
+                />
               </div>
             </div>
 
@@ -37,7 +49,13 @@ function Card(props) {
                 <div className="meta">
                   {new Date(data.lastUpdate).toDateString()}
                 </div>
-                <div className="description">{data.recovered}</div>
+                {/* <div className="description">{data.recovered}</div> */}
+                <CountUp
+                  start={0}
+                  end={data.recovered}
+                  duration={2.5}
+                  seperator=","
+                />
               </div>
             </div>
           </div>

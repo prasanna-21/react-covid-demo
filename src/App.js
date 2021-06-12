@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <h3 class="ui center aligned header">Covid-19</h3>
+      <h3 className="ui center aligned header">Covid-19</h3>
       <Search getCountry={handleCountryData} />
       <p className="para">
         {countryName !== "" ? `Cases in ${countryName}` : ""}
